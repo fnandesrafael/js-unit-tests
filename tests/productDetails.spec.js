@@ -34,11 +34,21 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
-    assert.strictEqual(typeof productDetails, 'array');
+    assert.strictEqual(typeof productDetails(), 'array');
     // Teste que o array retornado pela função contém dois itens dentro.
-    assert.strictEqual(productDetails(), 2);
+    assert.strictEqual(productDetails().length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(typeof productDetails([0, 1]), 'object');
     // Teste que os dois objetos são diferentes entre si.
+    /**
+     * Consultado o repositório do Dávio Lopes
+     * Link: https://github.com/tryber/sd-015-a-project-js-unit-tests/pull/139/files
+     * 
+     * Source: https://www.geeksforgeeks.org/node-js-assert-notdeepequal-function/
+     */
+    assert.notDeepEqual(productDetails([0]), productDetails([1]));
     // Teste que os dois productIds terminam com 123.
+    assert.deepStrictEqual(productDetails()[0].details.productId, 123);
+    assert.deepStrictEqual(productDetails()[1].details.productId, 123);
   });
 });
