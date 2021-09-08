@@ -13,23 +13,26 @@
 */
 
 const average = (numbers) => {
+// Variável que guarda a soma de todos os números para ser usada no cálculo da média
   let sum = 0;
-  let numAverage = 0;
-  
-  if (numbers === 0) {
+// For para percorrer todas as posições do array e realizar a verificação do tipo
+// O For também realiza a soma total de todos os valores
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (typeof numbers[i] !== 'number') {
+      return undefined;
+    }
+    sum += numbers[i];
+  }
+// Estrutura de condição para verificar o tamanho do array
+  if (numbers.length <= 0) {
     return undefined;
   }
-  
-  for (let i = 0; i < numbers.length; i += 1) {
-     if (typeof numbers[i] !== 'number') {
-       return undefined;
-     }
-     sum += numbers[i];
-  }
-
+// Variável que guarda o valor padrã da média
+  let numAverage = 0;
+// Cálculo da média realizado atravéz da divisão do total pelo tamanho do array
   numAverage = sum / numbers.length;
+// Estrutura que arredonda o valor da média entre os números
   let newNumAverage = Math.round(numAverage);
   return newNumAverage;
 };
-console.log(average([5, 0.45, 3.75]));
 module.exports = average;
