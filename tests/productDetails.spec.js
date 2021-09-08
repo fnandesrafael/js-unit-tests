@@ -52,7 +52,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
      */
     assert.notDeepEqual(productDetails([0]), productDetails([1]));
     // Teste que os dois productIds terminam com 123.
-    assert.deepStrictEqual(productDetails()[0].details.productId, `${productDetails([0])}123`);
-    assert.deepStrictEqual(productDetails()[1].details.productId, `${productDetails([1])}123`);
+    assert.deepStrictEqual(productDetails()[0].details.productId, `${productDetails([0]).details.productId}123`);
+    assert.deepStrictEqual(productDetails()[1].details.productId, `${productDetails([1]).details.productId}123`);
   });
 });
