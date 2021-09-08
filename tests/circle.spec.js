@@ -48,6 +48,6 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     /**
      * Souce: https://www.w3schools.com/nodejs/met_assert_deepstrictequal.asp
      */
-    assert.equal(circle(3), {area: 28.259999999999998, circumference: 18.84, radius: 3});
+    assert.deepStrictEqual(circle(3), {area: 28.259999999999998, circumference: 18.84, radius: 3});
   });
 });
