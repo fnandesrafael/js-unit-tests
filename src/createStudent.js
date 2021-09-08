@@ -15,10 +15,14 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
+/** 
+ * Source: https://stackoverflow.com/questions/36717376/arrow-function-in-object-literal
+ * Source: https://www.w3schools.com/js/js_arrow_function.asp
+*/
 const createStudent = (student) => {
   let newStudent = {
     name: student,
-    phrase: () => ('Eita pessoa boa!'),
+    feedback: () => ('Eita pessoa boa!'),
   };
   return newStudent;
 };
