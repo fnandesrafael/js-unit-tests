@@ -22,7 +22,7 @@ const vqv = (nome, idade) => {
     return undefined;
   }
 // Uso de Template Literal para a criação do parágrafo do requisito 3
-  let hello = `Oi, meu nome é ${nome}
+  let hello = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
